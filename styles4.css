@@ -1,0 +1,359 @@
+/* Import Google Fonts */
+@import url('[https://fonts.googleapis.com/css2?family=Poppins:wght@300;600;800&display=swap](https://fonts.googleapis.com/css2?family=Poppins:wght@300;600;800&display=swap)');
+
+/* Base Styling */
+* {
+  box-sizing: border-box;
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: 'Poppins', sans-serif; /* Poppins font is correctly applied */
+  background: linear-gradient(135deg, #f0f4ff, #d9e4ff);
+  color: #222;
+  margin: 0;
+  line-height: 1.65;
+  font-weight: 400;
+  -webkit-font-smoothing: antialiased;
+}
+
+/* Container */
+.container {
+  max-width: 960px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+/* Header */
+header {
+  background: #0f1e5a; /* Dark blue/grey */
+  padding: 15px 0;
+  box-shadow: 0 5px 15px rgba(15, 30, 90, 0.3);
+  position: sticky;
+  top: 0;
+  z-index: 100;
+}
+
+header .container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap; /* Allow wrapping on smaller screens */
+}
+
+header h1 a {
+  color: #fff;
+  font-weight: 800;
+  font-size: 1.9rem;
+  letter-spacing: 1.2px;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+header h1 a:hover {
+  color: #00bcd4; /* Changed from orange to teal/cyan */
+}
+
+nav ul {
+  display: flex;
+  gap: 25px;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  flex-wrap: wrap; /* Allow nav items to wrap */
+  justify-content: center; /* Center nav items when wrapped */
+}
+
+nav ul li a {
+  color: #cfd7ff;
+  font-weight: 600;
+  text-decoration: none;
+  text-transform: uppercase;
+  font-size: 0.9rem;
+  padding: 6px 10px;
+  border-radius: 4px;
+  transition: all 0.3s ease;
+}
+
+nav ul li a:hover {
+  background: #00bcd4; /* Changed from orange to teal/cyan */
+  color: white;
+  box-shadow: 0 4px 10px rgba(0, 188, 212, 0.6); /* Changed from orange to teal/cyan */
+}
+
+/* --- FIX FOR DOWNLOAD CV BUTTON --- */
+nav ul li a.button {
+  background: #2ecc71; /* Green for CV button */
+  color: white !important; /* Ensure text color is white */
+  font-weight: 700;
+  padding: 8px 18px;
+  border-radius: 5px; /* Ensure consistent border-radius */
+  box-shadow: 0 4px 10px rgba(46, 204, 113, 0.7); /* Green shadow */
+  width: auto; /* REMOVED fixed width: 50px; to fix shape */
+  display: inline-flex; /* Use flexbox for proper text and icon alignment */
+  align-items: center; /* Vertically center text and icon */
+  gap: 8px; /* Space between text and icon */
+  margin-left: 20px; /* Add margin to separate from other nav items */
+}
+
+nav ul li a.button:hover {
+  background: #27ae60; /* Darker green on hover */
+  box-shadow: 0 6px 12px rgba(46, 204, 113, 0.8); /* Darker green shadow */
+}
+/* --- END FIX FOR DOWNLOAD CV BUTTON --- */
+
+/* Hero Section */
+.hero {
+  background: linear-gradient(135deg, #667eea, #764ba2); /* Existing purple gradient */
+  color: white;
+  padding: 60px 20px;
+  border-radius: 15px;
+  margin: 30px auto; /* Centered margin */
+  box-shadow: 0 15px 30px rgba(118, 75, 162, 0.4);
+}
+
+.hero-content-wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 40px;
+  flex-wrap: wrap;
+}
+
+.profile-photo {
+  width: 190px;
+  height: 190px;
+  object-fit: cover;
+  border-radius: 50%;
+  border: 5px solid rgba(255, 255, 255, 0.8);
+  box-shadow: 0 8px 20px rgba(118, 75, 162, 0.6);
+  transition: transform 0.3s ease;
+}
+
+.profile-photo:hover {
+  transform: scale(1.05);
+}
+
+.hero-text-content {
+  max-width: 520px;
+  text-align: left;
+}
+
+.hero-text-content h2 {
+  font-size: 3rem;
+  font-weight: 800;
+  margin-bottom: 10px;
+  letter-spacing: 1px;
+}
+
+.hero-text-content .tagline {
+  font-size: 1.4rem;
+  font-weight: 600;
+  margin-bottom: 20px;
+  color: #c1c9ff;
+  font-style: italic;
+}
+
+.hero-text-content p {
+  font-size: 1.1rem;
+  line-height: 1.5;
+  text-align: justify; /* Ensured justification */
+}
+
+/* Social Links in Hero */
+.social-links {
+  margin-top: 18px;
+  display: flex; /* Use flexbox for better alignment of social links */
+  gap: 20px; /* Space between links */
+  flex-wrap: wrap; /* Allow wrapping on small screens */
+}
+
+.social-links a {
+  color: #c1c9ff;
+  font-weight: 600;
+  font-size: 1.1rem;
+  text-decoration: none;
+  transition: color 0.3s ease, border-bottom 0.3s ease;
+  border-bottom: 2px solid transparent;
+  padding-bottom: 3px;
+  display: inline-flex; /* For icon alignment */
+  align-items: center;
+  gap: 5px; /* Space between text and icon */
+}
+
+.social-links a:hover {
+  color: #00bcd4; /* Changed from orange to teal/cyan */
+  border-bottom: 2px solid #00bcd4; /* Changed from orange to teal/cyan */
+}
+
+/* Sections */
+section {
+  margin-bottom: 60px;
+}
+
+.section-alt {
+  background: white;
+  padding: 40px 20px;
+  border-radius: 15px;
+  box-shadow: 0 8px 25px rgba(0,0,0,0.05);
+}
+
+h2 {
+  font-weight: 800;
+  font-size: 2.6rem;
+  color: #0f1e5a;
+  margin-bottom: 20px;
+  border-bottom: 3px solid #00bcd4; /* Changed from orange to teal/cyan */
+  display: inline-block;
+  padding-bottom: 6px;
+}
+
+h3 {
+  font-weight: 700;
+  color: #464646;
+  margin-top: 30px;
+  margin-bottom: 10px;
+  font-size: 1.4rem;
+}
+
+/* Lists */
+ul {
+  list-style: disc inside;
+  margin-left: 1.5rem;
+  color: #555;
+  font-size: 1.1rem;
+  line-height: 1.5;
+}
+
+/* Education and Internship Cards */
+.education-item, .internship-item, .project-item {
+  background: #f7f9ff;
+  border-left: 6px solid #00bcd4; /* Changed from orange to teal/cyan */
+  padding: 20px 25px;
+  margin-bottom: 25px;
+  border-radius: 8px;
+  box-shadow: 0 6px 15px rgba(0, 188, 212, 0.15); /* Changed from orange to teal/cyan */
+  transition: box-shadow 0.3s ease, transform 0.3s ease; /* Added transform for hover effect */
+}
+
+.education-item:hover, .internship-item:hover, .project-item:hover {
+  box-shadow: 0 10px 25px rgba(0, 188, 212, 0.3); /* Changed from orange to teal/cyan */
+  transform: translateY(-5px); /* Lift effect on hover */
+}
+
+/* Project screenshots grid */
+.project-images-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); /* Default 200px min width */
+    gap: 15px;
+    margin-top: 12px;
+    margin-bottom: 18px;
+}
+
+.project-images-grid.two-cols {
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); /* For 2 columns, wider min */
+}
+
+.project-images-grid.one-col {
+    grid-template-columns: 1fr; /* For single column */
+}
+
+.project-screenshot {
+  max-width: 100%;
+  height: auto; /* Ensure aspect ratio is maintained */
+  border-radius: 12px;
+  box-shadow: 0 10px 20px rgba(118, 75, 162, 0.15);
+  transition: transform 0.3s ease;
+}
+
+.project-screenshot:hover {
+  transform: scale(1.03);
+}
+
+/* Contact Section */
+#contact p {
+  font-size: 1.1rem;
+  margin-bottom: 15px;
+}
+
+.contact-info a {
+  color: #0f1e5a;
+  font-weight: 700;
+  font-size: 1.2rem;
+  text-decoration: none;
+  border-bottom: 2px solid transparent;
+  transition: border-bottom 0.3s ease;
+}
+
+.contact-info a:hover {
+  color: #00bcd4; /* Changed from orange to teal/cyan */
+  border-bottom: 2px solid #00bcd4; /* Changed from orange to teal/cyan */
+}
+
+/* Social links in contact */
+#contact .social-links {
+    display: flex; /* Use flexbox for alignment */
+    gap: 20px; /* Space between links */
+    flex-wrap: wrap;
+    justify-content: center; /* Center social links in contact */
+}
+
+#contact .social-links a {
+  color: #0f1e5a;
+  font-weight: 700;
+  font-size: 1.1rem;
+  text-decoration: none;
+  border-bottom: 2px solid transparent;
+  transition: border-color 0.3s ease, color 0.3s ease;
+  display: inline-flex; /* For icon alignment */
+  align-items: center;
+  gap: 5px; /* Space between text and icon */
+}
+
+#contact .social-links a:hover {
+  color: #00bcd4; /* Changed from orange to teal/cyan */
+  border-bottom: 2px solid #00bcd4; /* Changed from orange to teal/cyan */
+}
+
+/* Footer */
+footer {
+  background: #0f1e5a;
+  color: #c1c9ff;
+  padding: 20px 0;
+  text-align: center;
+  font-size: 0.9rem;
+  letter-spacing: 0.03em;
+}
+
+footer p {
+  margin: 6px 0;
+}
+
+/* Responsive */
+@media (max-width: 720px) {
+  .hero-content-wrapper {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .hero-text-content {
+    max-width: 100%;
+  }
+
+  nav ul {
+    flex-direction: column; /* Stack nav items vertically on small screens */
+    align-items: center; /* Center stacked nav items */
+    gap: 10px; /* Adjust gap for stacked items */
+  }
+  /* Center h2 on small screens */
+  h2 {
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  /* Adjust button margin for stacked nav */
+  nav ul li a.button {
+    margin-left: 0;
+    margin-top: 15px; /* Add top margin when stacked */
+  }
+}
